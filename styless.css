@@ -1,0 +1,821 @@
+body
+{
+	margin: 0;
+	font-family: 'Montserrat', sans-serif; /*Стиль шрифта*/
+	
+	font-size: 15px Рзамер шрифта >
+	line-height:1.6; <!отступ H>
+	color:#333; <!цвет>
+}
+
+
+*,
+*:before,
+*:after {
+	box-sizing:border-box;
+}
+
+h1,h2,h3,h4,h5,h6{/*Высоты не будет*/
+	margib: 0;
+}
+.container{/*Контейнер, где будет находится все надписи>*/
+	width:100%;
+	max-width:70%; 
+	margin: 0 auto;
+}
+/* intro*/
+.intro{ /*Торт занимает весь экран */
+	width:100%;
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+		
+	background: url(Заставка.jpg) center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	
+}
+
+.intro__inner{
+	width:100%;
+	max-width:100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.intro__title{/*Надпись добро пожаловать*/
+	color:blue;
+	font-size:400%;
+	font-weight:700;
+	text-transform:uppercase;
+	line-height: 150%;
+}
+
+.intro__suptitle{/*Надпись магазин сладостей*/
+	font-size:4em;
+	color:blue;
+	line-height: 100%;
+	
+}
+
+/* header*/
+.header{
+	
+	width: 100%;
+	padding-top: 2%; /*Отступ от верха  */
+	
+	position: absolute;
+	top: 100;
+	left: 100;
+	right: 100;
+	z-index:1000;
+}
+.header__inner{/*Займут крайние положение заголовки на верху*/
+	display:flex;
+	justify-content:space-between;
+	align-items: center;
+}
+.haeder__logo{
+	font-size:20px;
+	font-weight: 1000;
+	color: red;
+}
+
+/* nav*/
+.nav{/*Шрифт ссылок справо */
+	font-size:14px;
+	text-transform: uppercase;
+}
+
+.nav__link{/*Меняет цвет, когда наводишься  */
+	display: inline-block; /*Чтобы ссылки все шли в строку*/
+	vertical-align: top;
+
+	position:relative;
+
+	color:red;
+	text-decoration: none;
+	
+	
+	transition: color 0.2s linear;/*Меняет цвет через 2 секунды, когда наводишься  */
+}
+
+.nav__link:after{/*Подчеркивает курсивом заголовки на верху*/
+	content:"";
+	display:block;
+	width:100%;
+	height:1%;
+	display:none;
+	
+	background-color:green;
+	
+	position:absolute;
+	top:100%;
+	left:0;
+	z-index:1;
+}
+.nav__link:hover {/*Меняет цвет на желтый */
+	color:green;
+}
+
+.nav__link:hover:after{
+	display:block;
+}
+
+
+/*Section*/
+.section{
+	padding: 3em;
+}
+
+.section__header{
+	width: 100%;
+	max-width:100vh;
+	margin:0 auto 0em;
+	text-align:center;
+	
+}
+.cake__header{
+	width: 100%;
+	max-width:950px;
+	margin:0 auto 40px;
+	text-align:center;
+}
+.section__suptitle{
+	font-size:40px;
+	color:blue;
+}
+.section__title{
+	font-size:35px;
+	font-weight:700;
+	color: blue;
+	text-transform:uppercase;
+}
+.section__text{
+	font-size:1em;
+	color:blue;
+}
+
+/*About*/
+.about{
+	display:flex;
+	justify-content:space-between;
+}
+
+.about__item{
+	width:30%;
+	position:relative;
+	
+}
+.about__item:hover .about__img{
+	transform: translate3d(-1em,-1em,0);
+}
+.about__item:hover .about__img img{
+	opacity: 0.1;
+}
+.about__item:hover  .about__text{
+	opacity:1;
+}
+.about__img{
+	padding: 0.8em 0;
+	
+	background: linear-gradient(to buttom,#f38181,#fce38a);
+	transition:transform 0.2s linear;
+}
+.about__img img{
+	width:80%;
+	height:150px;
+	display:block;
+	transition:opacity 0.1s linear;
+}
+.about__text{
+	
+	width:100%;
+	font-size:1.5em;
+	color:red;
+	text-transform: uppercase;
+	font-weight:700;
+	text-align:center;
+	opacity:0;
+	position:absolute;
+	top:50%;
+	left:-10%;
+	z-index:2;
+	transform:translate3d(0,-50%,0);
+	transition:opacity 0.2s linear;
+}
+
+/*Cake*/
+
+.cake{
+	padding: 20px 0;
+	background-color:#AFEEEE;
+
+}
+.cake__header{
+	width: 100%;
+	max-width:950px;
+	margin:0 auto 40px;
+	text-align:center;s
+}
+.cake__intro{
+	width:100%;
+	height:120vh;
+	display:flex;
+	
+	justify-content:center;
+	
+}
+
+/*statistics*/
+.statistics{
+	background-color:#95e1d3;
+	width:100%;
+	max-width:70%; 
+	margin: 0 auto;
+}
+
+.stat__conteiner{/*Контейнер, где будет находится все надписи>*/
+	width:100%;
+	max-width:70%; 
+	
+}
+.stat{
+	display:flex;
+	margin-bottom:100px;
+}
+.stat__item{
+	flex:1 1 0;
+	padding: 8% 1%;
+	border-left: 1px solid white;
+	
+	text-align:center;
+	color:#fff;
+}
+.stat__item:last-child{
+	border-right: 1px solid white;
+}
+.stat__count{
+	margin-bottom:10px;
+	font-size:50px;
+	font-weight:700;
+	line-height:1;
+}
+.stat__text{
+	font-size:15px;
+	text-transform:uppercase;
+}
+ 
+/*Wedo*/
+.wedo{
+	width:100%;
+	display:flex;
+	
+}
+
+.wedo__item{
+	width:50%;
+	position:relative;
+	
+}
+.wedo__img{
+	background: linear-gradient(to buttom,#f38181,#fce38a);
+	transition:transform 0.2s linear;
+}
+.wedo__img img{
+	width:100%;
+	height:50vh;
+	display:block;
+	transition:opacity 0.1s linear;
+	
+}
+/*Accordion*/
+.accordion__item{
+	border: 1px solid #e5e5e5;
+	margin-bottom:10px;
+	color:blue;
+}
+.accordion__item.active
+.accordion__content{/*Стрелочка, чтобы открывался текст,
+ а потом я понял, что это можно сделать только с джаваскрипт*/
+	display:block;
+}
+
+.accordion__item.active
+.accordion__header:after{
+	/*Стрелочка, чтобы открывался текст,
+ а потом я понял, что это можно сделать только с джаваскрипт*/
+	transform:translateY(-50%)
+	rotate(-45deg);
+	margin-top:5px;
+}
+
+.accordion__header{
+	padding: 1em 1.2em 1em 2em;  
+	position:relative;
+	color:blue;
+	border-bottom:0.3em solid #e5e5e5;
+	cursor:pointer;
+}
+.accordion__header:after{
+	content:"";
+	display:block;
+	width:1em;
+	height:1em;
+	border-top:0.2em solid #ccc;
+	border-right:0.2em solid #ccc;
+	
+	position:absolute;
+	top:50%;
+	right:1.2em;
+	z-index:1;
+	
+	transform:translateY(-50%)
+	rotate(135deg);
+}
+
+.accordion__content{
+	padding:1em 1.3em ;
+	font-size:80%;
+
+	font-style:italic;
+	font-weight:300;
+}
+.accordion__title{
+	font-size:100%;
+
+	text-transform:uppercase;
+}
+
+	/*Кнопка*/
+.back_to_top{
+	position:fixed;
+	right:90%;
+	bottom:50%;
+	width:3%;
+	height:6%;
+	border-color:transparent;
+	border-radius:50%;
+	background-color:#3944BC;
+}
+.back_to_top:hover,
+.back_to_top:focus{
+	filter:brightness(1.5);
+	outline:none;
+}
+.back_to_top::before,
+.back_to_top::after{
+	content:'';
+	position:absolute;
+	top:50%;
+	left:45%;
+	transform:translateY(-50%,-50%,);
+}
+.back_to_top::before{
+	width:10%;
+	height:50%;
+	border-top-left-radius:0.3em;
+	border-top-right-radius:0.3em;
+	background-color:#f5f0f6;
+}
+.back_to_top::after{
+	width: 33%;
+	height:35%;
+	transform:translate(-33%, -27%) rotate(45deg);
+	border-top: 0.8vh solid #f5f0f6;
+	border-left:0.8vh solid #f5f0f6;
+	
+}
+.konect{
+	width:100%;
+	display:flex;
+	
+}
+
+.konect__item{
+	width:65%;
+	position:relative;
+	
+}
+.kont{
+	background-color:black;
+}
+
+.kont__header{
+	width: 100%;
+	text-align:center;
+}
+
+.kont__title{
+	font-size:10px;
+	font-weight:700;
+	color: blue;
+	text-transform:uppercase;
+}
+
+.kont__text{
+	font-size:8px;
+	color:blue;
+}
+	
+	
+	
+	
+	
+	
+/*Медиа*/
+@media screen and  (max-width: 1300px)/*110*/ {
+	.intro__suptitle{
+		font-size:50px;
+	}
+	.intro__title{
+		font-size:60px;
+	}
+	.haeder__logo{
+		font-size:18px;
+	}
+	.nav{
+		font-size:12px;
+	}
+	.section__suptitle{
+	font-size:37px;
+	}
+	.section__title{
+		font-size:32px;
+	}
+	.section__text{
+		font-size:0.9em;
+	}
+	.kont__title{
+	font-size:10px;
+	}
+	.kont__text{
+		font-size:8px;
+	}
+	.stat{
+		margin-bottom:100px;
+	}
+	.stat__item{
+	padding: 8% 1%;
+	}
+	.stat__count{
+	margin-bottom:8px;
+	font-size:45px;
+	font-weight:700;
+	}
+	.stat__text{
+		font-size:12px;
+	}
+}
+
+@media screen and  (max-width: 1200px)/*125*/ {
+	.intro__suptitle{
+		font-size:40px;
+	}
+	.intro__title{
+		font-size:50px;
+	}
+	.haeder__logo{
+		font-size:16px;
+	}
+	.nav{
+		font-size:10px;
+	}
+	.section__suptitle{
+	font-size:33px;
+	}
+	.section__title{
+		font-size:29px;
+	}
+	.section__text{
+		font-size:0.8em;
+	}
+	.kont__title{
+	font-size:9px;
+	}
+	.kont__text{
+		font-size:7px;
+	}
+	.stat__item{
+	padding: 7% 1%;
+	}
+	.stat__count{
+	margin-bottom:6px;
+	font-size:40px;
+	font-weight:700;
+	}
+	.stat__text{
+		font-size:12px;
+	}
+}
+
+
+@media screen and  (max-width: 991px)/*150*/  {
+	.intro__suptitle{
+		font-size:30px;
+	}
+	.intro__title{
+		font-size:40px;
+	}
+	.haeder__logo{
+		font-size:14px;
+	}
+	.nav{
+		font-size:8px;
+	}
+	.section__suptitle{
+	font-size:30px;
+	}
+	.section__title{
+		font-size:26px;
+	}
+	.section__text{
+		font-size:0.7em;
+	}
+	.kont__title{
+	font-size:8px;
+	}
+	.kont__text{
+		font-size:6px;
+	}
+	.stat{
+		margin-bottom:80px;
+	}
+	.stat__item{
+	padding: 6% 1%;
+	}
+	.stat__count{
+	margin-bottom:6px;
+	font-size:35px;
+	font-weight:700;
+	}
+	.stat__text{
+		font-size:12px;
+	}
+
+}
+@media screen and  (max-width: 800px)/*175*/  {
+	.intro__suptitle{
+		font-size:20px;
+	}
+	.intro__title{
+		font-size:30px;
+	}
+	.haeder__logo{
+		font-size:12px;
+	}
+	.nav{
+		font-size:6px;
+	}
+	.section__suptitle{
+	font-size:26px;
+	}
+	.section__title{
+		font-size:22px;
+	}
+	.section__text{
+		font-size:0.6em;
+	}
+	.kont__title{
+	font-size:8px;
+	}
+	.kont__text{
+		font-size:6px;
+	}
+	.stat{
+		margin-bottom:60px;
+	}
+	.stat__item{
+	padding: 5% 1%;
+	}
+	.stat__count{
+	margin-bottom:6px;
+	font-size:30px;
+	font-weight:700;
+	}
+	.stat__text{
+		font-size:10px;
+	}
+}
+@media screen and  (max-width: 700px)/*200*/  {
+	.intro__suptitle{
+		font-size:15px;
+	}
+	.intro__title{
+		font-size:25px;
+	}
+	.haeder__logo{
+		font-size:10px;
+	}
+	.nav{
+		display:none;
+	}
+	.section__suptitle{
+	font-size:22px;
+	}
+	.section__title{
+		font-size:18px;
+	}
+	.section__text{
+		font-size:0.5em;
+	}
+	.kont__title{
+	font-size:8px;
+	}
+	.kont__text{
+		font-size:6px;
+	}
+	.stat{
+		display:block;
+		margin-bottom:50px;
+	}	
+	
+	.stat__item{
+	padding: 5% 1%;
+	
+	}
+	.stat__count{
+	margin-bottom:6px;
+	font-size:20px;
+	font-weight:700;
+	}
+	.stat__text{
+		font-size:8px;
+	}
+}
+
+@media screen and  (max-width: 575px)/*250*/ {
+	.intro__suptitle{
+		font-size:10px;
+	}
+	.intro__title{
+		font-size:20px;
+	}
+	.haeder__logo{
+		font-size:8px;
+	}
+	.section__suptitle{
+	font-size:18px;
+	}
+	.section__title{
+		font-size:14px;
+	}
+	.section__text{
+		font-size:0.4em;
+	}
+	.kont__title{
+	font-size:7px;
+	}
+	.kont__text{
+		font-size:5px;
+	}
+	.stat{
+		display:block;
+		margin-bottom:40px;
+	}	
+	.stat__item{
+	padding: 5% 1%;
+	}
+	.stat__count{
+	margin-bottom:6px;
+	font-size:20px;
+	font-weight:700;
+	}
+	.stat__text{
+		font-size:8px;
+	}
+}
+
+@media screen and  (max-width: 500px)/*300*/ {
+	.intro__suptitle{
+		font-size:10px;
+	}
+	.intro__title{
+		font-size:15px;
+	}
+	.haeder__logo{
+		font-size:7px;
+	}
+	.section__suptitle{
+	font-size:16px;
+	}
+	.section__title{
+		font-size:12px;
+	}
+	.section__text{
+		font-size:0.3em;
+	}
+	.kont__title{
+	font-size:6px;
+	}
+	.kont__text{
+		font-size:4px;
+	}
+	.stat{
+		display:block;
+		margin-bottom:30px;
+	}	
+	.stat__item{
+	padding: 5% 1%;
+	}
+	.stat__count{
+	margin-bottom:6px;
+	font-size:17px;
+	font-weight:700;
+	}
+	.stat__text{
+		font-size:6px;
+	}
+}
+@media screen and  (max-width: 350px)/*400*/ {
+	.intro__suptitle{
+		font-size:7px;
+	}
+	.intro__title{
+		font-size:12px;
+	}
+	.haeder__logo{
+		font-size:5px;
+	}
+	.section__suptitle{
+	font-size:12px;
+	}
+	.section__title{
+		font-size:10px;
+	}
+	.section__text{
+		font-size:0.2em;
+	}
+	.kont__title{
+	font-size:5px;
+	}
+	.kont__text{
+		font-size:3px;
+	}
+	.stat{
+		display:block;
+		margin-bottom:20px;
+	}	
+	.stat__item{
+	padding: 5% 1%;
+	}
+	.stat__count{
+	margin-bottom:6px;
+	font-size:13px;
+	font-weight:700;
+	}
+	.stat__text{
+		font-size:5px;
+	}
+}
+@media screen and  (max-width: 320px)/*500*/ {
+	.intro__suptitle{
+		font-size:5px;
+	}
+	.intro__title{
+		font-size:10px;
+	}
+	.haeder__logo{
+		font-size:4px;
+	}
+	.section__suptitle{
+	font-size:10px;
+	}
+	.section__title{
+		font-size:8px;
+	}
+	.section__text{
+		font-size:0.1em;
+	}
+	.kont__title{
+	font-size:5px;
+	}
+	.kont__text{
+		font-size:3px;
+	}
+	.stat{
+		display:block;
+		margin-bottom:10px;
+	}	
+	.stat__item{
+	padding: 5% 1%;
+	}
+	.stat__count{
+	margin-bottom:6px;
+	font-size:10px;
+	font-weight:700;
+	}
+	.stat__text{
+		font-size:4px;
+	}
+}
+
+
+
+
+
+
+
+
+	
